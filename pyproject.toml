@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gnn-usi-24"
+version = "0.1.0"
+description = ""
+authors = ["Mark <strategy155@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyterlab = "^4.1.2"
+torch = "^2.2.1"
+numpy = "^1.26.4"
+torch-geometric = "^2.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
