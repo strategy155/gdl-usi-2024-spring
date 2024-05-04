@@ -1,0 +1,3 @@
+[submodule "stocknet-dataset"]
+	path = stocknet-dataset
+	url = git@github.com:yumoxu/stocknet-dataset.git

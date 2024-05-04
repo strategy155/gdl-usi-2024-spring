@@ -1,0 +1,773 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+
+
+
+\begin{document}
+
+
+
+cesare alippi tommaso marzi gabriele dominici
+
+
+teaching material 
+
+slides
+
+- seceted papers
+prerequisites
+
+-- deep leraning lab
+-- machine learning
+
+
+course evaluation
+
+one assignment (demo + report 90)
+
+a quiz exam at the end of the course (10)
+
+
+1. intros to graph
+2. convolution of graphs
+3. spatiotemporal graphs (the time invariant fails? and reacting some )
+4. learning NSE
+5. Mich Bronstein ,Erlangen,  continous models for GNNs
+
+
+17 may 
+
+24 mayp
+
+
+WE START at 8:50 !!
+
+to 12 :10
+
+
+
+
+why graph?
+
+
+so in many applications graphs come naturally
+
+for example a molecula
+
+it is a graph obviously 
+
+so the neurons are actually the graphs too
+
+
+so in social nettworks the graphs are also natural
+
+
+so the people are entities
+
+so you have a team of people and you have the different relationships with those, 
+
+
+so you have several group of strong ties
+
+then you have the another group of weak ties
+
+and the temporary ties would be the outsiders
+
+and the weight depends
+
+
+we can derive the graphs from the time series, 
+
+sensor network, and they produce data, and there is a space and they generate a signal of the time and there is a temporal dimension too
+
+
+so there is a power grid , and we hav e a set of measuring sensors, and they are physically connected of course by the cables. so it is naturally construts to the graphs, because there are nodes which are not connected
+
+
+it is not functional though, it is just spatial
+
+so in social networks we have a functional dependency in the graph, 
+
+so we'd like to see if the node is connected by the others, if one node is consuming the same as the other, they are probably have functional links
+
+so we are , in addition to the spatial connections, searching the functinoal ones
+
+
+so we have a time series for every day, 
+
+and we can decide how those signals  related to the other. 
+
+causality dependency if one signal can be reconstructed to be the other one
+
+so those graphs are connected through several things at a time
+
+
+so the node attributes in this thing
+
+how much power consumed
+so temperature
+date time 
+holidays/weekdays
+number of inhabitants 
+and the WEALTH of course 
+A VECTOR OF ATTRIBUTES!!
+
+edges attributes here
+
+SIGNAL corellation (pearson)
+weather correlation  (if one house in shadow, and the one is not or yes)
+and cable length
+
+imagine that it is social network
+
+so the strength of connection in edges (maybe number of tweets or message)
+
+information related what you buy (political dependency), so we can try to go through a string inference
+
+for example our group is strong tie, and the recommendation is more orelss comes naturally from that
+
+we took a signal and build a graph
+
+so we can of course take a time window, and beuild a graph, and another window, and the information can a graph will be generated
+
+so you will end up with graph stream, and processing the GRAPH STREAM WILL bring you closer to the solution of those graphs
+
+so the applications
+
+social networks ofc
+
+Monti et al fake news detection
+
+traffic prediction, deepmind traffic 
+
+physics, graph neural networks in particle physics
+
+
+recommender systems 
+
+ying et al conv
+
+RL and graphs
+
+too
+
+do we really need to work with graphs?
+
+why shou ld we
+
+if we have  graph, so we have the nodes associations and the edges , for example affinity inbetween nodes (arrived from the nodes), so all the information is in the metrics
+
+
+
+so why we can't AI DL architecture (we have no need of that graph structure)
+
+this is sometimes true, but in some cases  not
+
+but in some cases You actually have a graph ! it is natural!
+
+so you have a chemical compound, which interacts with the body and compound s are interacting
+
+so Ithe nodes and the interaction are transformed
+
+can we argue that the edges are actually just a way how to guide the ML with a thing
+
+
+some issues philosophical
+
+- so end-to-end learned
+- hand engineered
+
+tradeoof between those
+- rich reperesentations, the graph processing
+- inductive bias, something
+
+
+so the inductive bias is an artifact, which allows a learning algorithm to prioritze over another (efficiently driving learning towards practilar regions)
+
+so the goal the preprocessing is to guide the learning process
+
+so the gradient is not actually looking the features, 
+
+the inductive bias is actually just something like is a prior
+
+and the changes with that prior ARE REALLY BRUTAL
+
+
+
+prior info can be encoded in the architerctuer
+
+
+so the graphs are usually inferred from the systems which has relational nature
+
+so the complex systmes can be a composition of niteracting entitise
+
+so those relational things are VERY serious, so you'll probably better not to ignore that
+
+the world is usually compositional or we understand the compositional
+
+for example things on the table are related to them, not only by the table, by the physical proximity too!
+
+so if there are relations
+
+we can start with a physical relations 
+
+we have same colour hydrogen, and the bond between the atoms are bidirectional
+
+in $n$-body system we have a bit of elemnts which are moving in space
+
+so in each timme $t$ the distances could be computed, so we will generate a graph steram
+
+fortext sentences  you can generate sytacitcal tre
+
+
+
+in mass spring system
+
+
+so you have a spring which is a continuos
+
+you can finite leemnt the sprign, and the nodes will be collected, and the mass will interact with the elemnts of the spring 
+
+so the interaction can be achieved 
+
+so th eleemnts of a rigid body systems also can interact inbetween the closed system, iso the desk will become a node of a graph, and will be 
+
+so you can segment the picture and say that the entities are somehow connected
+
+
+from signal to graphs 
+
+so we can ues the signal values and use the values to create the graph
+
+so the horizontatl visibilty graph can be generated if you'll assign the node each feauter for a speific time
+
+so you can think about the position, and think what cany ou physically see from the position of looking back, and then they are connected. If you cannot see other things, you are not connecting those
+
+
+another example of graph extraction 
+
+
+eecg 
+
+so you segment the heartbeats
+
+so you apply the the horizontal vision graph
+
+and you convert this eecg into the graph steram
+
+and the anomaly is now associated with the graph!!
+
+so we have another way to process the signal !
+
+
+types of graph
+
+os the directed graph is one-way direction, in causality from a sender to receiver
+
+thu undirected is actually bidirectied
+
+
+multigraph -- MULTIPLE EDGES BETWEEN VERTICES  (also self edges)
+
+
+attributes
+
+so the attribute can be atrtibute of a node (e.g. $v_i$)
+
+attribute can be associated with the edges, e.g. $e_k$
+
+
+or GLOBAL ATTRIBUTES, so the entire graph
+
+for example for a chemical compound, a solubility 
+
+for a lugano city, the power that you need tomorrow at twelve
+
+so the global attribute can be used as sort of HIGH LEVEL info in the graph
+
+
+
+
+so the tasks 
+
+can be node-focused, how much power  will you spend tomorrow
+
+the edge focused are about the relations and interactions inbetween entities
+
+the graph -focuesd tasks is about lal the energy the ssytme generate
+
+
+
+how to to represent the graph
+
+so we are effective in processing th vector, tensor, and something like that
+
+so you start from a graph, so you need to generate
+
+is the description in the topology of the graphs
+
+the infromation associated with the nodes
+
+and the info associated with the edges
+
+so the $A$ is the binary adjacency matrix, $n\times n$ , where $n$ is nunmber of the nodes
+
+
+so for the node 1 we have an association 
+
+so it is ssociated with node 3 and 4 
+
+so we put in the adjacency matrix for row 1 the 1-s in the column 3 and 4 and zeroes in all others
+
+so we represent the topology of the graph 
+
+so for node you just puth the row of the features ))
+
+for edge features is a companion for the adjacency matrix (weights of the edges)
+
+so the binary adjacency matrix is the good way to decouple those 
+
+the elements are generated PRIOR to the learning process
+
+sometimes you need to learn the topology of a graph
+
+so sometimes you learn the weights or the topology only 
+
+of course sometimes you can fix the topology, but the weight can be changed
+
+so you have a vouleme , which depends the cardinality of the vector
+
+so can we procsess the blocks keeping the fact that we have the relationships of structures
+
+so we need to generate the new operators for that
+
+
+so there are CNNs for examples
+
+it takes the advantage of the spcae locality principle
+
+we have some prior 
+
+the big cells satisfy the space locality principle
+
+so if we have a pixel (i,j) we have a higher probability that nearby pixels are related
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"../imgs/concrete pixel"}
+	\caption[Concrete \(i,j\) pixel selection]{}
+	\label{fig:concrete-pixel}
+\end{figure}
+
+
+so if we have a neighborhood and some features of those pixels are related
+
+so the layers of covolution and pooling are then globally pooled, so a vector, and you have FFN at the end
+
+so each layer computes a higher abstract representation, w.r.t. the previous one
+
+the convolution layers
+
+in the mona lisa, we start thwith a pixel, we look at the 3x3 neighboorhood and calculate the kernel function on that
+
+so the convolution mask (kernel)
+$I * K$
+
+so we have several kernels, and learn those
+
+and the kernel here is a filter 
+
+so the characterisitc of the filter is learned mostly
+
+many filters are applied ni parallel
+
+each one filter K is different (is K unique or not ?)
+
+so we got multiplied the amout of features, beacuse of multiple filters
+
+so after that you will get the pooling layer
+
+so you can do max-pooling (choosing maximum in a locality) or average pooling
+
+so we have the locality principle and then we can take the pooling of a location, because we know that THOSE ARE RELATED 
+
+there are different poolings
+
+so you can use activation function after the convolution or after the pooling
+
+
+so the functional proximity coincides with the physical proximity inth
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"../imgs/cnn inductive bias"}
+	\caption[Cnn inductive bias]{}
+	\label{fig:cnn-inductive-bias}
+\end{figure}
+
+
+so the graph can be constructed in the image pixels, because they are physicall related 
+
+
+so in graph this is not necerssaryl  to be nodes conicide the functionally and physically, but heth locality principle is satisfiied
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"../imgs/neighborhood filtering"}
+	\caption[Filtering in the cnn]{}
+	\label{fig:neighborhood-filtering}
+\end{figure}
+
+
+we can create a first neightboorhod of distance one and the neighboorhod ofthe second distance (green)
+
+so here you'll have a convolution for that type of graph
+
+
+so you can have a convolution filter for those types of the graphs
+
+and we have a convolution over the first spaec (yellow)
+
+and the convolution over the second neighboorhood
+
+so we have neighborhood-based convolution filte r
+
+
+so we have a one neighboorhod $x_1$ and get the $z_1$ for its neightborhood (for node representation)
+
+so we see that message passes, and we want to update the status based on your negihborhood states, and the each edge status (other )
+
+and all the every of those nodes will have the same  convolution filter
+
+you can then pool the aggregated nodes
+
+so you start with a covoluted image nad get the pooled result
+
+so in graph you want to have the graph topoolgy shrinked
+
+so the pool here will collapse the nodes, so we need to destroy some of the nodes, and redefien the edges betwen those
+
+global pooling you will need to turn a set of images to vector and then you go into classifier in example
+
+embed the graph to a vector , so the simplest way you can just put the nodes int the vector, or you can increase the complexity, and add somet hngis
+
+so we get a GNN by interleavintg the opertaors
+
+
+so also we can , instead of putting nodes to the vector, have a single node after some point of pooling
+
+so you can then do whatever you want 
+
+you also can apply the autoencoder to the type of structure
+
+
+so you will have a lantent space after the graph convolutions, and then apply the decoder, which will reconstruct the architecture which will produce a new graph !
+
+so the matrix-topology and the matrix of node features and edge weights matrix as a result of those
+
+you of course can destroy the decoder part and create the FFN in the end, and receive output
+
+
+
+SVMs )
+
+vanilla operation framework is just to embed the graph stream into the vector, and then process the vector , it is the very easy 
+
+so let's to understand graphs and emedding spaces
+
+attrbuted grahps is a big family of graphs
+
+
+extract only one character and transform the characters to graphs
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"../imgs/digit images mapping"}
+	\caption[digital images mapping]{}
+	\label{fig:digit-images-mapping}
+\end{figure}
+
+
+so the topology can change with time
+
+Also the vertices can be unidentified 
+
+
+
+We have a set of vertices and attributed
+
+So do those entities generate a probability space
+
+For example by inducing graph distance metric
+
+So the probability of generate a type of graph,and so is the graph distance happens
+
+We are not sure how to define the probability 
+
+Let’s see some enzymes then
+
+You can ask to generate enzyme
+
+And so you can ask to generate the graph
+
+And generate the features too!
+
+How the components interacts because of their structure??
+
+we have pdfs which generate the different topologies!!
+
+How to define the graph distances?
+
+If the structure is not difficult if you have the same structure 
+
+But the graph edit distance can help us to provide the metric to compare different topology 
+
+
+So we want to construct one A from another A
+
+We need to add one node!! 
+Or remove one
+
+And we are at the attribute level 
+
+Node insertion  or delete
+
+We change mode 
+
+We change an attribute 
+
+We don’t know the cost of operations, so we need to learn it
+
+Some of the embedding operations 
+
+We need to move from graph to a vector then!
+
+
+Distance based methods rely on distance
+
+So we try to map the graph to vector
+
+- dissimilarity repr
+
+
+We also can approach the neural
+
+Autoencoders
+
+So the idea of dissimilarities representation
+
+Set of diff graphs
+
+You extract the prototype graphs according to distribution or just some random graphs 
+
+So having those graphs will have to generate a vector
+
+So we will evaluate the graph in relation to one prototype: and generate the number
+
+And then the second prototype generates the number
+
+And so on 
+
+So the new space will be very different from the previous , it is highly no linear
+
+
+Multidimensional scaling
+
+You will get a number of prototype but will try to preserve the inter distances in the new space
+
+
+
+So new space will try to preserve the distances  between the prototype generated projections???
+
+So we try to use vectors to make things easier
+
+
+
+So in comparison of Euclidean and manifold those are very different 
+
+The curvature is zero
+
+We also have want to have a way to present the non Euclidean spaces 
+
+Geometric deep learning has those computed
+
+We try to constraint the embedding, but move to non Euclidean 
+
+So we can use the same method, it can be computed easily 
+
+You can control the curvature of the embedding?
+
+Autoencoder
+
+The latent space cannot guarantee that the graph closed one will be proximal in latent space
+
+So we need to use the scaling
+And also we can imply the prob distribution on the latent space?
+
+So if we have a distribution in graph space, we would like to impose it in latent soace
+
+So we use adversarial encoders in here
+
+Autoenxoder here
+
+In addition to the autiencider 
+
+So you get the distribution from latent space and the prior one and combine those to make those relatablr
+
+
+So you do one step of the gradient descent 
+And no advers part
+
+You use the discriminator after to check that the probability distribution of the space real or fake
+
+So you try to discriminate ample from real distribution and sample from latent space 
+
+So the thrid step you want to confuse the discriminator so it will  confused 
+
+So you try the update initial encoder to fool the discriminator 
+
+so the encoder will try to be like the distribution
+
+So you’ll try to impose the same distribution 
+
+At the end this is min max converges here and will be fine
+
+You can add a regularizer for distribution but it won’t be better and be less effective
+
+vae 
+
+So you start at a random picture
+
+And you’ll discriminate between real pictures and artificial
+
+Can that make the architecture 
+
+You can make use of the inductive bias in this case
+
+You always can have a deep architecture attached to graph
+
+But you’d like to preserve the 
+
+So in VAE you are controlling the distribution of the latent space 
+
+Within the adversarial mechanism we try to imply the distribution on the
+
+You can do it through penalty and you’ll trade off it
+Linear algebra
+You you’ll imply the eigenvalues in graph theory
+
+One vector $x$ and we applying $A$ so if the A is nxn so if you apply A to x you get the new vector $x’ = Ax$
+
+Is there any interesting direction for $x$?
+
+We want to find the $A$ which makes scaled $x$
+
+And the $A$ which multiplies $x$ to zero
+
+So preserving the direction is interesting for us
+
+$Ax= \lambda x$
+
+So you need to say something
+
+Equation $(A - \lambda I)x= 0$
+
+So x is true eugen vectors and lambdas are eigenvalues
+
+They cannot be computed if det  of subtraction is 0
+
+So you compute the determinant and get the lambdas
+
+So you solve the Linear systems with those lambdas
+
+
+
+So the privileged directions are found like so from vectors
+
+
+So you use the Spectral theorem
+
+You try the shrink the size of those vectors
+
+You rely on spectral theory
+
+So the covariance matrix can be regenerated 
+
+So this A matrix can be seen as a composition of matrixes products of eigenvalues and eigenvectors covariance
+
+So little lambdas can be ignored in PCA because
+
+So you can have a desire a only the relevant info
+
+So we can use only eigenvalues and associated vectors and use only those 
+
+Very effective way of sending messages 
+
+Reduces the complexity of input 
+
+Consider matrix A
+
+So then you get the eigenvectors
+
+So then you can plot those as  their values and their indices in 2D
+
+So we can also try to make the A to graph
+
+Those eigens are looking pretty much like signals
+
+
+We consider mostly the undirected graphs here
+
+The degree of node is amount ooc attached nodes
+
+If we consider the A matrix  and multiply it with 1-vector we get the degrees of the nodes in the topology so the 
+
+diag(D)= d
+
+So we also to see the laplacian matrix 
+
+$L=D-A$
+
+So you take the degree matrix and then subtract topology from it
+
+So laplacian is symmetric 
+
+Also it is semi definite posititve 
+
+So the number of zero in laplacian eigenvalues equals the number of  connected components
+
+If the graph is fully connected, there is only one null eigenvalues
+
+Case of chain graph
+
+For example time
+
+So we get the laplacian eigenvectors we see that it has spectral nature 
+
+So you can move the spectral things
+
+So the laplacian is looking at the flow of a field and you try to constrain the flow 
+
+So the Laplacian is looking on the field about the space 
+
+So it converts 
+
+Torch soatiotemporal spatiotemporal processing
+
+Spektral building gnns 
+
+Cdg  anomaly felldetection 
+
+Dts multi step time series 
+
+
+
+
+
+\includepdf[pages=1-62,link=true,linkname=slides]{../lectures/S.1 - Graph Deep Learning Introduction.pdf}
+
+
+\end{document}
