@@ -16,15 +16,15 @@ ipyparallel = "^8.8.0"
 ipynb = "^0.5.1"
 holidays = "^0.48"
 pyg-lib = [{platform="linux", version = "^0.4.0+pt23cu121", source = "pyg-pt23-cu121"},
-{platform="darwin", version = "^0.4.0+pt23", source = "pyg-pt23-cpu"}]
+{platform="darwin", version = "^0.4.0", source = "pyg-pt23-darwin"}]
 torch-scatter = [{platform="linux", version = "^2.1.2+pt23cu121", source = "pyg-pt23-cu121"},
-{platform="darwin", version = "^2.1.2+pt23", source = "pyg-pt23-cpu"}]
+{platform="darwin", version = "^2.1.2", source = "pyg-pt23-darwin"}]
 torch-sparse = [{platform="linux", version = "^0.6.18+pt23cu121", source = "pyg-pt23-cu121"},
-{platform="darwin", version = "^0.6.18+pt23", source = "pyg-pt23-cpu"}]
+{platform="darwin", version = "^0.6.18", source = "pyg-pt23-darwin"}]
 torch-cluster = [{platform="linux", version = "^1.6.3+pt23cu121", source = "pyg-pt23-cu121"},
-{platform="darwin", version = "^1.6.3+pt23", source = "pyg-pt23-cpu"}]
+{platform="darwin", version = "^1.6.3", source = "pyg-pt23-darwin"}]
 torch-spline-conv = [{platform="linux", version = "^1.2.2+pt23cu121", source = "pyg-pt23-cu121"},
-{platform="darwin", version = "^1.2.2+pt23", source = "pyg-pt23-cpu"}]
+{platform="darwin", version = "^1.2.2", source = "pyg-pt23-darwin"}]
 torch-geometric = "^2.5.3"
 torch-spatiotemporal = {git = "https://github.com/TorchSpatiotemporal/tsl.git"}
 tensorboardx = "^2.6.2.2"
@@ -39,7 +39,7 @@ url = "https://data.pyg.org/whl/torch-2.3.0+cu121.html"
 priority = "explicit"
 
 [[tool.poetry.source]]
-name = "pyg-pt23-cpu"
+name = "pyg-pt23-darwin"
 url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
 priority = "explicit"
 

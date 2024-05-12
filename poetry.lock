@@ -2477,7 +2477,7 @@ triton = ["triton"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
-reference = "pyg-pt23-cpu"
+reference = "pyg-pt23-darwin"
 
 [[package]]
 name = "pyg-lib"
@@ -3382,7 +3382,7 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
-reference = "pyg-pt23-cpu"
+reference = "pyg-pt23-darwin"
 
 [[package]]
 name = "torch-cluster"
@@ -3470,7 +3470,7 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
-reference = "pyg-pt23-cpu"
+reference = "pyg-pt23-darwin"
 
 [[package]]
 name = "torch-scatter"
@@ -3527,7 +3527,7 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
-reference = "pyg-pt23-cpu"
+reference = "pyg-pt23-darwin"
 
 [[package]]
 name = "torch-sparse"
@@ -3616,7 +3616,7 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
-reference = "pyg-pt23-cpu"
+reference = "pyg-pt23-darwin"
 
 [[package]]
 name = "torch-spline-conv"
@@ -3992,4 +3992,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "375f2c60bd134bdc213555ae21dfde1c212c034df98f8fc0cbd3c2c50aec5c9c"
+content-hash = "11eea50616557a66cc444e8973427977833c2df87d865254e37b38eb66f961e1"
