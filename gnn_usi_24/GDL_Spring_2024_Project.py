@@ -63,7 +63,7 @@ class StocknetDataset(SpatioTemporalDataset):
 #                                             shape=stocknet_diff.shape)
 #
 # test_map = BatchMap(y=test_item)
-def make_binary_classification(data):
+def convert_target_to_binary(data):
     adjusted_close = data.y[:,:,-2]
     adjusted_close_rises = (adjusted_close > 0)
     data.y = adjusted_close_rises.to(torch.int)
@@ -71,7 +71,7 @@ def make_binary_classification(data):
 
 
 print(stocknet_diff)
-test_df = StocknetDataset(target=stocknet_diff,transform=make_binary_classification,
+test_df = StocknetDataset(target=stocknet_diff,transform=convert_target_to_binary,
                                      connectivity=edge_index_sector,
                                       horizon=1,
                                       window=12,
