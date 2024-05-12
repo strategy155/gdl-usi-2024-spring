@@ -2452,6 +2452,35 @@ files = [
 
 [[package]]
 name = "pyg-lib"
+version = "0.4.0+pt23cpu"
+description = "Low-Level Graph Neural Network Operators for PyG"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "pyg_lib-0.4.0+pt23cpu-cp310-cp310-linux_x86_64.whl", hash = "sha256:3b6c47a9f626866ba532586f5879957f2f69b8faa98244812c5054ba191b7bf7"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp310-cp310-win_amd64.whl", hash = "sha256:4cfccff4ac5d5752b1620dd85b89872ab0e05f80115cba91d0d8eb4e33ee6cf0"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp311-cp311-linux_x86_64.whl", hash = "sha256:9405df2b909e245cd8e3644b6b49eba6670d35a07687b693d5cab0698d58fb32"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp311-cp311-win_amd64.whl", hash = "sha256:a839df210e7d3f6a34eb98f2fbacbb17bb5b159d9c70dd9840a34ece8452bec9"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp312-cp312-linux_x86_64.whl", hash = "sha256:ab2994075cae4f4f1fd19009936f7b1b9679606d747e4ddb0786cb1e01ddffaf"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp312-cp312-win_amd64.whl", hash = "sha256:c066c84b05825a436deb28c465e8e96962e67cfb5b1cdeb2b14998b2e6ad6aa8"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp38-cp38-linux_x86_64.whl", hash = "sha256:1ec08c1b8cf6d7f0e7f1e2becf722b70e2c8be23772d1982f80d93af0ccd2031"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp38-cp38-win_amd64.whl", hash = "sha256:b6e33a87b4af90ea1afc878fc54606beffabc3268d3ab9856dd147316f8f8327"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp39-cp39-linux_x86_64.whl", hash = "sha256:a7be2c43dec70a914ec1b8748278b67927dde9eabe55fccf2e7e65bb79cf4507"},
+    {file = "pyg_lib-0.4.0+pt23cpu-cp39-cp39-win_amd64.whl", hash = "sha256:0afd47c61dbc3c560d3c7c645a48ebe8c76945fa5f84150350fd5ad9766bd9a0"},
+]
+
+[package.extras]
+dev = ["pre-commit"]
+test = ["pytest", "pytest-cov"]
+triton = ["triton"]
+
+[package.source]
+type = "legacy"
+url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
+reference = "pyg-pt23-cpu"
+
+[[package]]
+name = "pyg-lib"
 version = "0.4.0+pt23cu121"
 description = "Low-Level Graph Neural Network Operators for PyG"
 optional = false
@@ -2477,7 +2506,7 @@ triton = ["triton"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cu121.html"
-reference = "pyg"
+reference = "pyg-pt23-cu121"
 
 [[package]]
 name = "pygments"
@@ -3327,6 +3356,36 @@ optree = ["optree (>=0.9.1)"]
 
 [[package]]
 name = "torch-cluster"
+version = "1.6.3+pt23cpu"
+description = "PyTorch Extension Library of Optimized Graph Cluster Algorithms"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "torch_cluster-1.6.3+pt23cpu-cp310-cp310-linux_x86_64.whl", hash = "sha256:133fd9c682043bf319a7c4b2331bf2d8e4fdced8877878c8f57cb888bc6fa43d"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp310-cp310-win_amd64.whl", hash = "sha256:15380885fd7d0e5a5c8337d76beb1c0216f045a800b333d4de0666ba038e5841"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp311-cp311-linux_x86_64.whl", hash = "sha256:856f9414173adfc03dee36d4623f723bdadfedd16ebf9db8a9d71f960b9812f4"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp311-cp311-win_amd64.whl", hash = "sha256:938bfbd21810918be4b77a6ed576e670e01b4c96be64e04aae91eb7ba9017ca9"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp312-cp312-linux_x86_64.whl", hash = "sha256:351b46baae172e9464fac0981e9366aecac8137d8aa378e0f13b2ea49501aedd"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp312-cp312-win_amd64.whl", hash = "sha256:64f0085409acef9e121ace30a2b4c89c506b369e7fdc4692e1a36f61f55a83b6"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp38-cp38-linux_x86_64.whl", hash = "sha256:90858b7bc49ec13129af39921d6bed330754b4414c0751d8912da9f7c0d18110"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp38-cp38-win_amd64.whl", hash = "sha256:3ecf5c1f8244d51f5fd0de701589c215e5854069c44a8762f35fe40c2f5dc37d"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp39-cp39-linux_x86_64.whl", hash = "sha256:70cc7378413e821a5d611bc927a53d3dc81d1461092af8f897a1bf70c99c7734"},
+    {file = "torch_cluster-1.6.3+pt23cpu-cp39-cp39-win_amd64.whl", hash = "sha256:8fc5d2159a703c066191790ea02a6d0d84719a449ec1f1c7884887322ac9226f"},
+]
+
+[package.dependencies]
+scipy = "*"
+
+[package.extras]
+test = ["pytest", "pytest-cov"]
+
+[package.source]
+type = "legacy"
+url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
+reference = "pyg-pt23-cpu"
+
+[[package]]
+name = "torch-cluster"
 version = "1.6.3+pt23cu121"
 description = "PyTorch Extension Library of Optimized Graph Cluster Algorithms"
 optional = false
@@ -3353,7 +3412,7 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cu121.html"
-reference = "pyg"
+reference = "pyg-pt23-cu121"
 
 [[package]]
 name = "torch-geometric"
@@ -3388,6 +3447,33 @@ test = ["onnx", "onnxruntime", "pytest", "pytest-cov"]
 
 [[package]]
 name = "torch-scatter"
+version = "2.1.2+pt23cpu"
+description = "PyTorch Extension Library of Optimized Scatter Operations"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "torch_scatter-2.1.2+pt23cpu-cp310-cp310-linux_x86_64.whl", hash = "sha256:ca6a73b95adad2c7efb72da5f2905d3ab19d1b9a21ced8287a3379d1b4d37fb5"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp310-cp310-win_amd64.whl", hash = "sha256:68d097892ff2d0f634c3bc97ccc806ffc903e8a67f09f8dba45de14612b35202"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp311-cp311-linux_x86_64.whl", hash = "sha256:b8decd92736badf42282bf16494c5928c488048b844c858121d8ff158ea37d49"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp311-cp311-win_amd64.whl", hash = "sha256:281704a40afb7641faa134991bb1c151a39f9bdb78c0f0df23864827a530d58c"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp312-cp312-linux_x86_64.whl", hash = "sha256:b62050a38ec91715fd75dafa9a46017a74b891c604155c7a4c6347f1c8f9b139"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp312-cp312-win_amd64.whl", hash = "sha256:3848733d9f1cb7206638a800de0963c0c17736800db7665e3c7bffae3464c0d6"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp38-cp38-linux_x86_64.whl", hash = "sha256:b215e446c6774cc3767ec8d683bde5201fed1fafafb52e4e3d6589b9f4c24861"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp38-cp38-win_amd64.whl", hash = "sha256:c620dd50fe0f6461791ba177cfa97ff3666985f91012117012aa41e3447daec9"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp39-cp39-linux_x86_64.whl", hash = "sha256:5c481915492c71bf1a8c62334fd9ddfcb63ca7b7c03c56333a741c9a8547fe83"},
+    {file = "torch_scatter-2.1.2+pt23cpu-cp39-cp39-win_amd64.whl", hash = "sha256:f94ac27380a6880d4db1ca48000c63ec74ba9c2d70bf79bd80141fa8e85eb283"},
+]
+
+[package.extras]
+test = ["pytest", "pytest-cov"]
+
+[package.source]
+type = "legacy"
+url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
+reference = "pyg-pt23-cpu"
+
+[[package]]
+name = "torch-scatter"
 version = "2.1.2+pt23cu121"
 description = "PyTorch Extension Library of Optimized Scatter Operations"
 optional = false
@@ -3411,7 +3497,37 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cu121.html"
-reference = "pyg"
+reference = "pyg-pt23-cu121"
+
+[[package]]
+name = "torch-sparse"
+version = "0.6.18+pt23cpu"
+description = "PyTorch Extension Library of Optimized Autograd Sparse Matrix Operations"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "torch_sparse-0.6.18+pt23cpu-cp310-cp310-linux_x86_64.whl", hash = "sha256:a2e263809f70905474268a2eea8f2cab6e6982715da9757205bd3fcd667ed954"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp310-cp310-win_amd64.whl", hash = "sha256:f7adb2b5a77246aeaa3e34e1d42c2ae170d38778b47220c733f1245aa2a7e5d7"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp311-cp311-linux_x86_64.whl", hash = "sha256:2247a778a0701eacd4a84243531b24d1d4e76f898fe3a8b5fecde31fe86ca182"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp311-cp311-win_amd64.whl", hash = "sha256:64f3b93ddc09d72faa92d3300b71854b1b7dfe873462d97b6b967f14cf986460"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp312-cp312-linux_x86_64.whl", hash = "sha256:dd1a42e4172f34d9cbdbfb4835d15b3eedfe1d9aca8620effec2a500dfd9e566"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp312-cp312-win_amd64.whl", hash = "sha256:b28370701b37d65fec3d6aec795ec8b4ba09d8bd635565b8a11292570eeab23a"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp38-cp38-linux_x86_64.whl", hash = "sha256:f7a6026c2769ae7ac1ee0e2fc4acf545df896e564459e568f8b9ab7ddfe99780"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp38-cp38-win_amd64.whl", hash = "sha256:4e11dc6faf07b3291479bc07ae34562611a316ec3f3a418e0975576f5393df76"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp39-cp39-linux_x86_64.whl", hash = "sha256:7f2735630c4b37af7dd20cc6d345760c4d05a5d5f73e6fedf09884e042e0eb5f"},
+    {file = "torch_sparse-0.6.18+pt23cpu-cp39-cp39-win_amd64.whl", hash = "sha256:83bc8a40df7da007014743b633db053d709d0c63a6e6ca926d976761b0e8e961"},
+]
+
+[package.dependencies]
+scipy = "*"
+
+[package.extras]
+test = ["pytest", "pytest-cov"]
+
+[package.source]
+type = "legacy"
+url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
+reference = "pyg-pt23-cpu"
 
 [[package]]
 name = "torch-sparse"
@@ -3441,7 +3557,7 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cu121.html"
-reference = "pyg"
+reference = "pyg-pt23-cu121"
 
 [[package]]
 name = "torch_spatiotemporal"
@@ -3477,6 +3593,33 @@ resolved_reference = "39270b72858cc33edb775e1602e4e2a178d42c13"
 
 [[package]]
 name = "torch-spline-conv"
+version = "1.2.2+pt23cpu"
+description = "Implementation of the Spline-Based Convolution Operator of SplineCNN in PyTorch"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp310-cp310-linux_x86_64.whl", hash = "sha256:0a29fad4d8ac62022940ea89b66c907e67a25416e6bc62b8ceab81e9b25ec543"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp310-cp310-win_amd64.whl", hash = "sha256:bc8c852eeab271825ed33eb247a428bb7af41efe5a7f21e6cfdae021f39e5d55"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp311-cp311-linux_x86_64.whl", hash = "sha256:8c292f5417a8b3477478160a7bf343a400bdfacd38291e21411e14f0db9cd6d0"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp311-cp311-win_amd64.whl", hash = "sha256:bd99e540151dbc0cb1c703f67ff13c19c808cee543073e3b03cb73c1140c6a53"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp312-cp312-linux_x86_64.whl", hash = "sha256:a0470d2f5c237f16c3f6d37a4ebe0df549eea357a8bfbf024ed597c49bcca307"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp312-cp312-win_amd64.whl", hash = "sha256:db12fce40ae9bd51b49d49efeabe599e9efdf1ac7015b6067ac3a285b93a4154"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp38-cp38-linux_x86_64.whl", hash = "sha256:2c549c3a1276c6194a6f6dbbe98c595e2e8c17573efd2534510a75429c78833d"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp38-cp38-win_amd64.whl", hash = "sha256:d8cd2ca0b831bfa383fc1d95f8f634617a53fccc313beb2f07f1a781c85f7588"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp39-cp39-linux_x86_64.whl", hash = "sha256:d9ee72282d1d2e4d576ac9b994e8c89eb8ffd5d5c295bedf5c7799804f6230d1"},
+    {file = "torch_spline_conv-1.2.2+pt23cpu-cp39-cp39-win_amd64.whl", hash = "sha256:4cb98c71cff705be6f09d8afc7470f0aa164dce0b1e07e439ffd3687e7f2d2ca"},
+]
+
+[package.extras]
+test = ["pytest", "pytest-cov"]
+
+[package.source]
+type = "legacy"
+url = "https://data.pyg.org/whl/torch-2.3.0+cpu.html"
+reference = "pyg-pt23-cpu"
+
+[[package]]
+name = "torch-spline-conv"
 version = "1.2.2+pt23cu121"
 description = "Implementation of the Spline-Based Convolution Operator of SplineCNN in PyTorch"
 optional = false
@@ -3500,7 +3643,7 @@ test = ["pytest", "pytest-cov"]
 [package.source]
 type = "legacy"
 url = "https://data.pyg.org/whl/torch-2.3.0+cu121.html"
-reference = "pyg"
+reference = "pyg-pt23-cu121"
 
 [[package]]
 name = "torchmetrics"
@@ -3849,4 +3992,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "5e879a26829ffc1838c90da9b9ec8e9a724f43ec5bee9d6c3cea4208078d0025"
+content-hash = "656fbf5cad90e67e27bcc64f15df577356949e861d2db2e4a0fdc9c911225f0d"
