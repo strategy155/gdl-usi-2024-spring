@@ -47,10 +47,6 @@ def centered_bound_scaler(df,upper=.9, warn_threshold=10e-6):
         
     return df_norm, invert_norm
 
-
-# In[233]:
-
-
 def unit_centered_scaler(df,upper=.9, warn_threshold=10e-6):
     '''each column is normalized based on it's measurement unit, values are mapped linearly in the range [-upper,upper], 0 is mapped to 0'''
     usd_cols = (slice(None), ["Open","High","Low","Close","Adj Close"])
@@ -83,7 +79,6 @@ def unit_centered_scaler(df,upper=.9, warn_threshold=10e-6):
     return df_norm, invert_norm, invert_values
 
 
-# In[231]:
 
 
 def check_nans(stocknet_diff: pd.DataFrame):
